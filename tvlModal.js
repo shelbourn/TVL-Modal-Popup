@@ -8,7 +8,7 @@ const btn = document.getElementById('myBtn')
 const span = document.getElementsByClassName('close')[0]
 
 // Get the onPageLoad element that loads the modal automatically
-let load = document.getElementById('onPageLoad')
+// const load = document.getElementById('onPageLoad')
 
 window.onload = () => {
 	// When the user clicks the button, open the modal
