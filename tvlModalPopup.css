@@ -1,5 +1,5 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 }
 
 /* The Modal (background) */
@@ -20,11 +20,15 @@ body {
 /* Modal Content */
 .modal-content {
 	position: relative;
-	background-color: #fefefe;
+	background-image: url('TVL_Logo_Watermark.png');
+	background-size: cover;
+	background-color: #000000;
 	margin: auto;
-	padding: 0;
-	border: 1px solid #888;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid #888;
 	width: 80%;
+	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	animation-name: animatetop;
 	animation-duration: 0.5s;
@@ -48,6 +52,7 @@ body {
 .close {
 	color: #aaaaaa;
 	float: right;
+	padding-right: 5px;
 	font-size: 28px;
 	font-weight: bold;
 }

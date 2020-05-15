@@ -8,13 +8,15 @@ const btn = document.getElementById('myBtn')
 const span = document.getElementsByClassName('close')[0]
 
 // Get the onPageLoad element that loads the modal automatically
-const load = document.getElementById('onPageLoad')
+let load = document.getElementById('onPageLoad')
 
-// When the user clicks the button, open the modal
-load.onload = function () {
-	modal.style.display = 'block'
+window.onload = () => {
+	// When the user clicks the button, open the modal
+	const loadModal = () => {
+		modal.style.display = 'block'
+	}
+	loadModal()
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
 	modal.style.display = 'none'
