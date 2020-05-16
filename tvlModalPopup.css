@@ -48,16 +48,19 @@
 /* Styling for the header */
 .tvlModal-header {
 	background-color: #03ac6c80;
-	padding: 10px;
+	padding: 20px;
+	border-radius: 10px 10px 0 0;
 	box-sizing: border-box;
+	position: relative;
+	top: 0;
 }
 
 /* General styling for the content */
-.tvlModal-content h1 {
-	color: white;
+.tvlModal-header h1 {
+	color: lightgray;
+	font-size: xx-large;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 5px;
 	margin: 0px;
 	width: 100%;
 	box-sizing: border-box;
@@ -66,11 +69,12 @@
 /* Styling for the h2 elements */
 .tvlModal-content h2 {
 	text-transform: uppercase;
+	padding: 15px;
 }
 
 /* Styling for the body */
 .tvlModal-body {
-	margin-top: 15px;
+	/* margin-top: 15px; */
 	text-align: center;
 	color: lightgray;
 	width: 100%;
@@ -79,7 +83,7 @@
 }
 
 .tvlModal-body h3 {
-	margin: 5px;
+	/* margin: 5px; */
 }
 
 .tvlModal-body a {
@@ -91,7 +95,7 @@
 .tvlModal-button {
 	display: inline-block;
 	margin: auto;
-	padding: 16px;
+	/* padding: 15px; */
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
@@ -180,6 +184,50 @@
 		top: 0;
 		opacity: 1;
 		transform: scale(1, 1);
+		opacity: 1;
+	}
+}
+
+/* Styling the footer */
+.tvlModal-footer {
+	background-color: #03ac6c80;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 0;
+	/* margin-top: 10px; */
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+}
+
+.tvlModal-footer h3 {
+	margin: 0px;
+	font-style: italic;
+	color: lightgray;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.tvlModal-footer a {
+	text-decoration: none;
+	color: darkgray;
+}
+
+.tvlModal-footer a:hover {
+	color: #000;
+	animation-name: linkHover;
+	animation-duration: 0.5s;
+}
+
+@keyframes linkHover {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
 		opacity: 1;
 	}
 }
