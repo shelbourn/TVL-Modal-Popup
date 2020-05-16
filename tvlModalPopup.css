@@ -1,7 +1,7 @@
 /* The Modal (background) */
-.tvlModal::before {
+.tvlModal {
 	font-family: sans-serif;
-	display: none; /* Hidden by default */
+	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 999; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
@@ -15,9 +15,9 @@
 }
 
 /* Modal Content */
-.tvlModal-content::before {
+.tvlModal-content {
 	position: relative;
-	background-image: url('/content/TVL_Logo_Watermark.png');
+	background-image: url('TVL_Logo_Watermark.png');
 	background-size: cover;
 	background-color: #000000;
 	z-index: 998;
@@ -47,7 +47,7 @@
 }
 
 /* The Close Button */
-.tvlClose::before {
+.tvlClose {
 	color: #aaaaaa;
 	float: right;
 	padding-right: 5px;
@@ -55,8 +55,8 @@
 	font-weight: bold;
 }
 
-.tvlClose::before:hover,
-.tvlClose::before:focus {
+.tvlClose:hover,
+.tvlClose:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
