@@ -23,7 +23,6 @@
 	background-color: #000000;
 	z-index: 998;
 	margin: auto;
-	box-sizing: border-box;
 	border-radius: 10px;
 	border: 2px solid #888;
 	width: 80%;
@@ -35,7 +34,9 @@
 
 /* Styling for the header */
 .tvlModal-header {
-	background-color: #03ac6c75;
+	background-color: #03ac6c80;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 /* General styling for the content */
@@ -45,9 +46,61 @@
 	text-transform: uppercase;
 	padding: 5px;
 	margin: 0px;
+	width: 100%;
+	box-sizing: border-box;
 }
 
-/* Add Animation */
+/* Styling for the body */
+.tvlModal-body {
+	margin-top: 15px;
+	text-align: center;
+	color: lightgray;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.tvlModal-body h3 {
+	margin: 5px;
+}
+
+.tvlModal-body a {
+	text-decoration: none;
+	color: #03ac6c;
+}
+
+.tvlModal-button {
+	display: inline-block;
+	margin: auto;
+	padding: 16px;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.tvlModal-button button:first-of-type {
+	background: linear-gradient(indianred, #000000);
+}
+
+.tvlModal-button button {
+	color: lightgray;
+	width: 15%;
+	max-width: 15%;
+	font-size: 20px;
+	padding: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 10px;
+	border-radius: 5px;
+	background: linear-gradient(#03ac6c, #000000);
+}
+
+.tvlModal-button button:hover {
+	cursor: pointer;
+	animation-name: hover;
+}
+
+/* Animate In */
 @keyframes animatetop {
 	from {
 		top: -300px;
