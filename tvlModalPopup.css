@@ -1,7 +1,7 @@
 /* The Modal (background) */
 .tvlModal {
 	font-family: sans-serif;
-	display: block; /* Hidden by default */
+	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	box-sizing: border-box;
 	z-index: 999; /* Sit on top */
