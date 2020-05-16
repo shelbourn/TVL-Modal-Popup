@@ -24,7 +24,6 @@
 	z-index: 998;
 	margin: auto;
 	box-sizing: border-box;
-	padding: 5px;
 	border-radius: 10px;
 	border: 2px solid #888;
 	width: 80%;
@@ -34,10 +33,18 @@
 	animation-duration: 0.5s;
 }
 
+/* Styling for the header */
+.tvlModal-header {
+	background-color: #03ac6c75;
+}
+
+/* General styling for the content */
 .tvlModal-content h1 {
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
+	padding: 5px;
+	margin: 0px;
 }
 
 /* Add Animation */
@@ -52,22 +59,4 @@
 		width: 80%;
 		opacity: 1;
 	}
-}
-
-/* The Close Button */
-.tvlClose {
-	color: #aaaaaa;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	padding-right: 5px;
-	font-size: 28px;
-	font-weight: bold;
-}
-
-.tvlClose:hover,
-.tvlClose:focus {
-	color: #03ac6c;
-	text-decoration: none;
-	cursor: pointer;
 }

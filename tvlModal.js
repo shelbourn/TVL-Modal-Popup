@@ -5,7 +5,7 @@ const tvlModal = document.getElementById('tvlModal')
 // const tbtn = document.getElementById('myBtn')
 
 // Get the <span> element that closes the modal
-const tvlSpan = document.getElementsByClassName('tvlClose')[0]
+// const tvlSpan = document.getElementsByClassName('tvlClose')[0]
 
 // Get the onPageLoad element that loads the modal automatically
 // const load = document.getElementById('tvlOnPageLoad')
@@ -22,9 +22,9 @@ const tvlSpan = document.getElementsByClassName('tvlClose')[0]
 // 	loadModal()
 // }
 // When the user clicks on <span> (x), close the modal
-tvlSpan.onclick = function () {
-	tvlModal.style.display = 'none'
-}
+// tvlSpan.onclick = function () {
+// 	tvlModal.style.display = 'none'
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
