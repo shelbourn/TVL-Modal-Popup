@@ -3,6 +3,7 @@
 	font-family: sans-serif;
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
+	box-sizing: border-box;
 	z-index: 999; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
 	left: 0;
@@ -22,6 +23,7 @@
 	background-color: #000000;
 	z-index: 998;
 	margin: auto;
+	box-sizing: border-box;
 	padding: 5px;
 	border-radius: 10px;
 	border: 2px solid #888;
@@ -30,6 +32,12 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	animation-name: animatetop;
 	animation-duration: 0.5s;
+}
+
+.tvlModal-content h1 {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 /* Add Animation */
@@ -49,7 +57,9 @@
 /* The Close Button */
 .tvlClose {
 	color: #aaaaaa;
-	float: right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
 	padding-right: 5px;
 	font-size: 28px;
 	font-weight: bold;
@@ -57,7 +67,7 @@
 
 .tvlClose:hover,
 .tvlClose:focus {
-	color: #000;
+	color: #03ac6c;
 	text-decoration: none;
 	cursor: pointer;
 }
