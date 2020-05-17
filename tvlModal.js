@@ -12,9 +12,23 @@ declineButton.onclick = () => {
 	window.location = 'https://www.google.com'
 }
 
+// Setting a cookie to hide the modal for one day
+const hideModalCookie = () => {
+	let now = new Date()
+	let time = now.getTime()
+	let expireTime = time + 86400
+	now.setTime(expireTime)
+	document.cookie = 'verify=true;expires=' + now.toGMTString() + ';path=/'
+	tvlModal.style.display = 'none'
+}
+
 // Triggering accept button action
 acceptButton.onclick = () => {
 	tvlModal.style.display = 'none'
+}
+
+acceptButton.onclick = () => {
+	hideModalCookie()
 }
 
 // Get the onPageLoad element that loads the modal automatically
@@ -23,10 +37,3 @@ acceptButton.onclick = () => {
 // load.onload = () => {
 // 	tvlModal.style.display = 'block'
 // }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-	if (event.target == tvlModal) {
-		tvlModal.style.display = 'none'
-	}
-}
