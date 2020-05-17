@@ -4,7 +4,7 @@
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	box-sizing: border-box;
-	z-index: 999; /* Sit on top */
+	z-index: 998; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -33,7 +33,7 @@
 
 .tvlModal-content {
 	position: relative;
-	z-index: 998;
+	z-index: 999;
 	background: #000;
 	margin: auto;
 	border-radius: 10px;
@@ -183,13 +183,11 @@
 @keyframes animatetop {
 	from {
 		top: -300px;
-		opacity: 0;
 		transform: scale(0, 0);
 		opacity: 0;
 	}
 	to {
 		top: 0;
-		opacity: 1;
 		transform: scale(1, 1);
 		opacity: 1;
 	}
