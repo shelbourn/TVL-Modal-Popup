@@ -4,7 +4,7 @@
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	box-sizing: border-box;
-	z-index: 998; /* Sit on top */
+	z-index: 1; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -33,7 +33,6 @@
 
 .tvlModal-content {
 	position: relative;
-	z-index: 999;
 	background: #000;
 	margin: auto;
 	border-radius: 10px;
@@ -42,7 +41,7 @@
 	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	animation-name: animatetop;
-	animation-duration: 0.5s;
+	animation-duration: 1s;
 }
 
 /* Styling for the header */
@@ -55,22 +54,38 @@
 	top: 0;
 }
 
-/* General styling for the content */
-.tvlModal-header h1 {
-	color: lightgray;
-	font-size: xx-large;
-	text-align: center;
-	text-transform: uppercase;
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
+/* Styling the footer */
+.tvlModal-footer {
+	background-color: #03ac6c80;
 	box-sizing: border-box;
+	position: relative;
+	bottom: 0;
+	padding: 5px;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
 }
 
-/* Styling for the h2 elements */
-.tvlModal-content h2 {
-	text-transform: uppercase;
-	padding: 0px;
+.tvlModal-footer a {
+	text-decoration: none;
+	color: darkgray;
+}
+
+.tvlModal-footer a:hover {
+	color: #000;
+	animation-name: linkHover;
+	animation-duration: 0.5s;
+}
+
+@keyframes linkHover {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* Styling for the body */
@@ -82,16 +97,6 @@
 	width: 100%;
 	box-sizing: border-box;
 	height: auto;
-}
-
-.tvlModal-body h2 {
-	padding: 0;
-	padding-bottom: 20px;
-	margin: 0;
-}
-
-.tvlModal-body h3 {
-	padding-bottom: 10px;
 }
 
 .tvlModal-body a {
@@ -189,49 +194,6 @@
 	to {
 		top: 0;
 		transform: scale(1, 1);
-		opacity: 1;
-	}
-}
-
-/* Styling the footer */
-.tvlModal-footer {
-	background-color: #03ac6c80;
-	box-sizing: border-box;
-	position: relative;
-	bottom: 0;
-	padding: 0;
-	border-radius: 0 0 10px 10px;
-	text-align: center;
-}
-
-.tvlModal-footer h3 {
-	margin: 0px;
-	font-style: italic;
-	color: lightgray;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 10px;
-}
-
-.tvlModal-footer a {
-	text-decoration: none;
-	color: darkgray;
-}
-
-.tvlModal-footer a:hover {
-	color: #000;
-	animation-name: linkHover;
-	animation-duration: 0.5s;
-}
-
-@keyframes linkHover {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	100% {
 		opacity: 1;
 	}
 }
