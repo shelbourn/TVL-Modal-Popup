@@ -124,13 +124,13 @@
 
 /* Footer Link */
 .tvlTC {
-	color: lightgray;
+	color: #000;
 	text-decoration: none;
 }
 
 /* Footer link hover */
 .tvlTC:hover {
-	color: darkgray;
+	color: lightgray;
 	-webkit-animation-name: linkHover;
 	animation-name: linkHover;
 	-webkit-animation-duration: 0.5s;

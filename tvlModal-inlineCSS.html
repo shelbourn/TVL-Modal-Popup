@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="tvlModalPopup-inlineCSS.css" />
 	</head>
+	<script defer src="tvlModal.js"></script>
 
 	<!-- Modal Background Overlay -->
 	<div
@@ -30,7 +31,7 @@
 				background-image: url('TVL_Logo_Watermark.png');
 				background-size: cover;
 				background-color: #000;
-				margin: auto;
+				margin: 0 auto;
 				border-radius: 10px;
 				border: 2px solid #888;
 				width: 80%;
@@ -71,7 +72,7 @@
 					font-weight: bold;
 				"
 			>
-				<p style="font-size: x-large; margin: 0;">
+				<p style="font-size: x-large; margin: 20px auto;">
 					You must be 21 years or older to enter The Vapour Lounge.
 				</p>
 				<p style="font-size: larger; margin-bottom: 30px;">
@@ -79,7 +80,7 @@
 				</p>
 
 				<!-- Decline Button -->
-				<div>
+				<div style="margin-bottom: 20px;">
 					<button
 						class="btnDecline"
 						style="
@@ -140,11 +141,18 @@
 					bottom: 0;
 					padding: 5px;
 					border-radius: 0 0 10px 10px;
-					font-size: large;
-					font-weight: bold;
+					font-size: medium;
+					font-style: italic;
 					text-align: center;
+					color: lightgray;
 				"
 			>
+				<p>
+					In accordance with San Francisco municipal code, we are no longer able
+					to ship orders to any San Francisco addresses. Any orders shipping to
+					San Francisco will be automatically refunded. We apologize for the
+					inconvenience.
+				</p>
 				<p>
 					By confirming that you are 21 or you are also consenting to our
 					<a
