@@ -1,0 +1,24 @@
+@keyframes animatetop {
+	from {
+		top: -300px;
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+}
+
+#tvlTC a {
+	text-decoration: none;
+	color: darkgray;
+}
+
+#tvlTC a:hover {
+	-webkit-animation-name: linkHover;
+	animation-name: linkHover;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
