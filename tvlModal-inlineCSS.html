@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="tvlModalPopup-inlineCSS.css" />
 	</head>
 
+	<!-- Modal Background Overlay -->
 	<div
 		id="tvlModal"
 		style="
@@ -22,7 +23,7 @@
 			background-color: rgba(0, 0, 0, 0.4);
 		"
 	>
-		<!-- Modal content -->
+		<!-- Modal Container -->
 		<div
 			style="
 				position: relative;
@@ -39,33 +40,45 @@
 				animation: animatetop 1s;
 			"
 		>
+			<!-- Modal Container - Header-->
 			<div
 				style="
 					background-color: #03ac6c80;
-					padding: 20px;
+					padding: 5px;
 					border-radius: 10px 10px 0 0;
 					box-sizing: border-box;
 					position: relative;
 					top: 0;
+					font-size: xx-large;
+					font-weight: bolder;
+					text-align: center;
+					text-transform: uppercase;
+					color: lightgray;
 				"
 			>
 				<p>Age Verification</p>
 			</div>
+
+			<!-- Modal Container Body -->
 			<div
 				style="
 					text-align: center;
-					padding: 40px;
-					margin: 0;
+					padding: 30px;
 					color: lightgray;
 					width: 100%;
 					box-sizing: border-box;
 					height: auto;
+					font-weight: bold;
 				"
 			>
-				<p>
+				<p style="font-size: x-large; margin: 0;">
 					You must be 21 years or older to enter The Vapour Lounge.
 				</p>
-				<p>Please confirm your age below.</p>
+				<p style="font-size: larger; margin-bottom: 30px;">
+					Please confirm your age below.
+				</p>
+
+				<!-- Decline Button -->
 				<div>
 					<button
 						class="btnDecline"
@@ -90,6 +103,8 @@
 					>
 						Under 21
 					</button>
+
+					<!-- Accept Button -->
 					<button
 						class="btnAccept"
 						style="
@@ -115,6 +130,8 @@
 					</button>
 				</div>
 			</div>
+
+			<!-- Modal Container - Footer -->
 			<div
 				style="
 					background-color: #03ac6c80;
@@ -123,6 +140,8 @@
 					bottom: 0;
 					padding: 5px;
 					border-radius: 0 0 10px 10px;
+					font-size: large;
+					font-weight: bold;
 					text-align: center;
 				"
 			>

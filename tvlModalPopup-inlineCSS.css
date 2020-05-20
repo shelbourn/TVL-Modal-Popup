@@ -34,6 +34,7 @@
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	background: indianred;
+	animation-fill-mode: forwards;
 }
 
 /* Decline button animation */
@@ -82,6 +83,7 @@
 	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 	background: #03ac6c;
+	animation-fill-mode: forwards;
 }
 
 /* Accept button animation */
@@ -122,13 +124,13 @@
 
 /* Footer Link */
 .tvlTC {
-	color: darkgrey;
+	color: lightgray;
 	text-decoration: none;
 }
 
 /* Footer link hover */
 .tvlTC:hover {
-	color: #000;
+	color: darkgray;
 	-webkit-animation-name: linkHover;
 	animation-name: linkHover;
 	-webkit-animation-duration: 0.5s;
