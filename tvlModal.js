@@ -13,9 +13,9 @@ declineButton.onclick = () => {
 }
 
 // Setting a cookie to hide the modal for one day
-const hideModalCookie = () => {
+const tvlModalCookie = () => {
 	const cookieName = 'tvlAgeVerification' // The cookie name
-	const cookieLifetime = 365 // Cookie expiry in days
+	const cookieLifetime = 1 // Cookie expiry in days
 
 	// Setting a cookie
 	const _setCookie = (cname, cvalue, exdays) => {
@@ -52,23 +52,26 @@ const hideModalCookie = () => {
 
 	// Show the cookie popup on load if not previously accepted
 	if (_shouldShowPopup()) {
-		$('#cookieModal').modal('show')
+		tvlModal.style.display = 'block'
 	}
 
-	// Modal dismiss btn - consent
-	$('#cookieModalConsent').on('click', function () {
+	// Triggering the cookie generation if none exists on acceptButton click
+	acceptButton.onclick = () => {
 		_setCookie(cookieName, 1, cookieLifetime)
-	})
+	}
 }
+
+// Calling the tvlModalCookie function immediately on page load
+tvlModalCookie()
 
 // Triggering accept button action
 acceptButton.onclick = () => {
 	tvlModal.style.display = 'none'
 }
 
-acceptButton.onclick = () => {
-	hideModalCookie()
-}
+// acceptButton.onclick = () => {
+// 	hideModalCookie()
+// }
 
 // Get the onPageLoad element that loads the modal automatically
 // const load = document.getElementById('tvlOnPageLoad')
