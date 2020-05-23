@@ -55,27 +55,13 @@ const tvlModalCookie = () => {
 		tvlModal.style.display = 'block'
 	}
 
-	// Triggering the cookie generation if none exists on acceptButton click
+	// Triggering the cookie generation (if none exists) on acceptButton click
+	// Also dismissing modal on acceptButton click (if modal is shown)
 	acceptButton.onclick = () => {
 		_setCookie(cookieName, 1, cookieLifetime)
+		tvlModal.style.display = 'none'
 	}
 }
 
 // Calling the tvlModalCookie function immediately on page load
 tvlModalCookie()
-
-// Triggering accept button action
-acceptButton.onclick = () => {
-	tvlModal.style.display = 'none'
-}
-
-// acceptButton.onclick = () => {
-// 	hideModalCookie()
-// }
-
-// Get the onPageLoad element that loads the modal automatically
-// const load = document.getElementById('tvlOnPageLoad')
-
-// load.onload = () => {
-// 	tvlModal.style.display = 'block'
-// }
