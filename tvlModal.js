@@ -1,34 +1,67 @@
 // Get the modal
 const tvlModal = document.getElementById('tvlModal')
 
-// Get the button that opens the modal
-// const tbtn = document.getElementById('myBtn')
+// Get the decline button
+const declineButton = document.getElementById('btnDecline')
 
-// Get the <span> element that closes the modal
-const tvlSpan = document.getElementsByClassName('tvlClose')[0]
+// Get the accept button
+const acceptButton = document.getElementById('btnAccept')
 
-// Get the onPageLoad element that loads the modal automatically
-// const load = document.getElementById('tvlOnPageLoad')
-
-// load.onload = () => {
-// 	tvlModal.style.display = 'block'
-// }
-
-// window.onload = () => {
-// 	// When the user clicks the button, open the modal
-// 	const loadModal = () => {
-// 		tvlModal.style.display = 'block'
-// 	}
-// 	loadModal()
-// }
-// When the user clicks on <span> (x), close the modal
-tvlSpan.onclick = function () {
-	tvlModal.style.display = 'none'
+// Triggering decline button action
+declineButton.onclick = () => {
+	window.location = 'https://www.google.com'
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-	if (event.target == tvlModal) {
+// Setting a cookie to hide the modal for one day
+const tvlModalCookie = () => {
+	const cookieName = 'tvlAgeVerification' // The cookie name
+	const cookieLifetime = 1 // Cookie expiry in days
+
+	// Setting a cookie
+	const _setCookie = (cname, cvalue, exdays) => {
+		let d = new Date()
+		d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
+		let expires = 'expires=' + d.toUTCString()
+		document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
+	}
+
+	// Retrieving any stored cookie
+	const _getCookie = (cname) => {
+		let name = cname + '='
+		let ca = document.cookie.split(';')
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i]
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1)
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length)
+			}
+		}
+		return ''
+	}
+
+	// Should the modal be shown?
+	const _shouldShowPopup = () => {
+		if (_getCookie(cookieName)) {
+			return false
+		} else {
+			return true
+		}
+	}
+
+	// Show the cookie popup on load if not previously accepted
+	if (_shouldShowPopup()) {
+		tvlModal.style.display = 'block'
+	}
+
+	// Triggering the cookie generation (if none exists) on acceptButton click
+	// Also dismissing modal on acceptButton click (if modal is shown)
+	acceptButton.onclick = () => {
+		_setCookie(cookieName, 1, cookieLifetime)
 		tvlModal.style.display = 'none'
 	}
 }
+
+// Calling the tvlModalCookie function immediately on page load
+tvlModalCookie()

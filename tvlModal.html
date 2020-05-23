@@ -5,17 +5,36 @@
 		<link rel="stylesheet" type="text/css" href="tvlModalPopup.css" />
 	</head>
 	<body>
-		<!-- <div id="tvlOnPageLoad"> -->
 		<!-- The Modal -->
-		<!--! CHANGE IMAGE REF TO /content/tvl...png-->
 		<div id="tvlModal" class="tvlModal">
 			<!-- Modal content -->
 			<div class="tvlModal-content">
-				<div class="tvlClose">&times;</div>
-				<h1>Age Verification</h1>
+				<div class="tvlModal-header">
+					<p>Age Verification</p>
+				</div>
+				<div class="tvlModal-body">
+					<p>
+						You must be 21 years or older to enter The Vapour Lounge.
+					</p>
+					<p>Please confirm your age below.</p>
+					<div class="tvlModal-button">
+						<button id="btnDecline">Under 21</button>
+						<button id="btnAccept">21+</button>
+					</div>
+				</div>
+				<div class="tvlModal-footer">
+					<p>
+						By confirming that you are 21 or you are also consenting to our
+						<a
+							target="blank"
+							href="https://store.vapewithstyle.com/terms-conditions/"
+							alt="TVL Terms and Conditions"
+							>Terms & Conditions</a
+						>
+					</p>
+				</div>
 			</div>
 		</div>
-		<!-- </div> -->
 		<script src="tvlModal.js"></script>
 	</body>
 </html>

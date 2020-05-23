@@ -4,7 +4,7 @@
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	box-sizing: border-box;
-	z-index: 999; /* Sit on top */
+	z-index: 1; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -16,58 +16,184 @@
 }
 
 /* Modal Content */
+
+/* Setting the background image with opacity */
+.tvlModal-content:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	background-size: cover;
+	background-image: url('TVL_Logo_Watermark.png');
+	opacity: 0.4;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
 .tvlModal-content {
 	position: relative;
-	background-image: url('TVL_Logo_Watermark.png');
-	background-size: cover;
-	background-color: #000000;
-	z-index: 998;
+	background: #000;
 	margin: auto;
-	box-sizing: border-box;
-	padding: 5px;
 	border-radius: 10px;
 	border: 2px solid #888;
 	width: 80%;
 	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	animation-name: animatetop;
+	animation-duration: 1s;
+}
+
+/* Styling for the header */
+.tvlModal-header {
+	background-color: #03ac6c80;
+	padding: 20px;
+	border-radius: 10px 10px 0 0;
+	box-sizing: border-box;
+	position: relative;
+	top: 0;
+}
+
+/* Styling the footer */
+.tvlModal-footer {
+	background-color: #03ac6c80;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 0;
+	padding: 5px;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+}
+
+.tvlModal-footer a {
+	text-decoration: none;
+	color: darkgray;
+}
+
+.tvlModal-footer a:hover {
+	color: #000;
+	animation-name: linkHover;
 	animation-duration: 0.5s;
 }
 
-.tvlModal-content h1 {
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-	from {
-		top: -300px;
-		width: 0%;
+@keyframes linkHover {
+	0% {
 		opacity: 0;
 	}
-	to {
-		top: 0;
-		width: 80%;
+	50% {
+		opacity: 0.5;
+	}
+	100% {
 		opacity: 1;
 	}
 }
 
-/* The Close Button */
-.tvlClose {
-	color: #aaaaaa;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	padding-right: 5px;
-	font-size: 28px;
-	font-weight: bold;
+/* Styling for the body */
+.tvlModal-body {
+	text-align: center;
+	padding: 40px;
+	margin: 0;
+	color: lightgray;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
 }
 
-.tvlClose:hover,
-.tvlClose:focus {
-	color: #03ac6c;
+.tvlModal-body a {
 	text-decoration: none;
+	color: #03ac6c;
+}
+
+/* Styling the buttons */
+.tvlModal-button {
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.tvlModal-button button:first-of-type {
+	background: linear-gradient(indianred, #000000);
+}
+
+.tvlModal-button button {
+	color: lightgray;
+	width: 200px;
+	font-size: 20px;
+	padding: 16px;
+	margin: 10px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+	background: linear-gradient(#03ac6c, #000000);
+}
+
+/* Hover styling for decline button */
+.tvlModal-button button:first-of-type:hover {
 	cursor: pointer;
+	animation-name: btnHoverDecline;
+	animation-duration: 0.5s;
+	background: indianred;
+}
+
+/* Hover Animation for decline button */
+@keyframes btnHoverDecline {
+	0% {
+		opacity: 0;
+		transform: scale(0.8, 0.8);
+		background: indianred;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.3, 1.3);
+		background: indianred;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+		background: indianred;
+	}
+}
+
+/* Hover styling for accept button */
+.tvlModal-button button:hover {
+	cursor: pointer;
+	animation-name: btnHoverAccept;
+	animation-duration: 0.5s;
+	background: #03ac6c;
+}
+
+/* Hover Animation for accept button */
+@keyframes btnHoverAccept {
+	0% {
+		opacity: 0;
+		transform: scale(0.8, 0.8);
+		background: #03ac6c;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.3, 1.3);
+		background: #03ac6c;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+		background: #03ac6c;
+	}
+}
+
+/* Animate In */
+@keyframes animatetop {
+	from {
+		top: -300px;
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
 }
